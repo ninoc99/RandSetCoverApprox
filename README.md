@@ -20,6 +20,7 @@ fase **pilot** (Python) e fase **workhorse** (C++).
 
 ## Struttura del progetto
 
+```text
 SetCover_RandomApprox/
 ├── test/                        # Fase pilot (Python)
 │   ├── algoritmi/               # Implementazioni algoritmi
@@ -66,7 +67,7 @@ SetCover_RandomApprox/
 │   ├── report.tex
 │   ├── plot/
 │   ├── img/
-
+\```
 
 ---
 
