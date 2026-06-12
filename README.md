@@ -33,16 +33,16 @@ SetCover_RandomApprox/
 │   │   ├── randomized.py
 │   │   └── randomized_las_vegas.py
 │   ├── esperimenti/             # Script esperimenti
+│   │   ├── exp_bn_rand_round.py
+│   │   ├── exp.distrib_cover.py
+│   │   ├── exp_fail_rate.py
+│   │   ├── exp_greedy_hashmap.py
+│   │   ├── exp_n_round.py
 │   │   ├── exp_qs.py
+│   │   ├── exp_rand_las_vegas.py
 │   │   ├── exp_rt.py
+│   │   ├── exp_var_rand.py
 │   │   ├── exp_wc.py
-│   │   ├── exp3_var.py
-│   │   ├── exp5_param_c.py
-│   │   ├── exp6_fail_rate.py
-│   │   ├── exp7_distrib.py
-│   │   ├── exp_hashmap.py
-│   │   ├── exp9_bottleneckRoundRand.py
-│   │   ├── exp_lv_vs_mc.py
 │   │   ├── analisi.py
 │   │   └── plot.py
 │   ├── risultati/               # CSV e plot
@@ -79,7 +79,7 @@ SetCover_RandomApprox/
 - Visual Studio Code con estensione Python
 - Ambiente virtuale (`.venv`)
 
-###Librerie e dipendenze
+### Librerie e dipendenze
 
 Python:
 - pulp
@@ -91,31 +91,52 @@ C++:
 - clang++
 - GLPK 5.0
 
-## Istruzioni d'uso (utenti MacOS)
+
+### Installazione dipendenze Python
+
+```bash
+cd test
+python3 -m venv .venv
+source .venv/bin/activate
+pip install pulp pandas matplotlib gurobipy
+```
+
+### Installazione GLPK (macOS)
+
+```bash
+brew install glpk
+```
+
+## Istruzioni d'uso
 
 ### Regression test (verifica correttezza)
 
 ```bash
 cd test
-source .venv/bin/activate
 python3 regression_test.py
 ```
 
-### Esperimenti pilot
+### Esecuzione esperimenti pilot
+
+Prima di eseguire le analisi, occorre generare i CSV eseguendo 
+tutti gli script degli esperimenti:
 
 ```bash
 cd test
-source .venv/bin/activate
 
-# stampa risultati e plot degli esperimenti
+# esegui tutti gli esperimenti (genera i CSV in test/risultati/)
+python3 esperimenti/exp_*.py #eseguire uno script per volta
+
+# poi esegui analisi e plot
 python3 esperimenti/analisi.py
 python3 esperimenti/plot.py
 ```
 
-### Workhorse C++
+### Workhorse C++ (utenti MacOS)
 
 ```bash
 cd workhorse
+make
 
 # esperimento runtime (W1, W2, W3)
 ./setcover runtime
