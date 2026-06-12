@@ -4,10 +4,11 @@
 
 Implementazione e valutazione sperimentale di algoritmi di approssimazione 
 per il problema Set Cover con focus sulle tecniche di randomizzazione.
-Algoritmi studiati:
+
+### Algoritmi studiati:
 
 - Brute force
-- ILP
+- ILP (Integer Linear Programming)
 - Greedy deterministico
 - Greedy con pattern Hash Map (Reduce-to-Hash-Tables)
 - Randomized Rounding — Monte Carlo
@@ -62,12 +63,13 @@ SetCover_RandomApprox/
 │   ├── analisi.py
 │   ├── plot.py
 │   └── Makefile
-└── report/
-│   ├── report.pdf
-│   ├── report.tex
-│   ├── plot/
-│   ├── img/
-\```
+└── report/                      # Documentazione e relazioni finali
+    ├── report.pdf
+    ├── report.tex
+    ├── plot/
+    └── img/
+
+```
 
 ---
 
@@ -77,13 +79,15 @@ SetCover_RandomApprox/
 - Visual Studio Code con estensione Python
 - Ambiente virtuale (`.venv`)
 
-Librerie Python:
+###Librerie e dipendenze
+
+Python:
 - pulp
 - pandas 
 - matplotlib
 - gurobipy
 
-Librerie C++:
+C++:
 - clang++
 - GLPK 5.0
 
