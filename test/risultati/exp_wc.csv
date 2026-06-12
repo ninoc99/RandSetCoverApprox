@@ -1,0 +1,25 @@
+k,n,algoritmo,dim_cover,opt,rho,valid
+3,14,Brute Force,2,2,1.0,True
+3,14,ILP,2,2,1.0,True
+3,14,Greedy,3,2,1.5,True
+3,14,Randomized,2,2,1.0,True
+4,30,Brute Force,2,2,1.0,True
+4,30,ILP,2,2,1.0,True
+4,30,Greedy,4,2,2.0,True
+4,30,Randomized,2,2,1.0,True
+5,62,Brute Force,2,2,1.0,True
+5,62,ILP,2,2,1.0,True
+5,62,Greedy,5,2,2.5,True
+5,62,Randomized,2,2,1.0,True
+6,126,Brute Force,2,2,1.0,True
+6,126,ILP,2,2,1.0,True
+6,126,Greedy,6,2,3.0,True
+6,126,Randomized,2,2,1.0,True
+7,254,Brute Force,2,2,1.0,True
+7,254,ILP,2,2,1.0,True
+7,254,Greedy,7,2,3.5,True
+7,254,Randomized,2,2,1.0,True
+8,510,Brute Force,2,2,1.0,True
+8,510,ILP,2,2,1.0,True
+8,510,Greedy,8,2,4.0,True
+8,510,Randomized,2,2,1.0,True
