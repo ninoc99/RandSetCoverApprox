@@ -91,7 +91,7 @@ C++:
 - clang++
 - GLPK 5.0
 
-## Istruzioni d'uso
+## Istruzioni d'uso (utenti MacOS)
 
 ### Regression test (verifica correttezza)
 
@@ -126,6 +126,35 @@ cd workhorse
 # tutti gli esperimenti
 ./setcover all
 ```
+---
+### Compilazione workhorse su Linux
+
+Il Makefile è configurato per macOS con `clang++`. 
+Su Linux sostituire il compilatore con `g++`.
+
+**1. Installa g++ se non presente:**
+```bash
+sudo apt install g++          # Ubuntu/Debian
+```
+
+**2. Installa GLPK:**
+```bash
+sudo apt install libglpk-dev  # Ubuntu/Debian
+```
+
+**3. Modifica il Makefile** — sostituisci le prime tre righe con:
+```makefile
+CXX      = g++
+CXXFLAGS = -O2 -std=c++17 -Wall
+LDFLAGS  = -lglpk
+```
+
+**4. Compila ed esegui:**
+```bash
+make
+./setcover all
+```
+---
 
 I risultati sono salvati in `workhorse/risultati/`.
 
